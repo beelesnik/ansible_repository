@@ -1,0 +1,10 @@
+---
+- hosts: 127.0.0.1
+  remote_user: sergei
+  
+  tasks:
+
+   - name: Create recursive directories
+     file: path=/tmp/dir1/dir2/dir3 owner=root group=root mode=0777 state=directory
+     become: yes
+
